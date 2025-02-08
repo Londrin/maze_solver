@@ -1,1 +1,3 @@
 # maze_solver
+
+## Code will generate a 16x12 maze that fits with screen size of 800x600 with a 50 screen margin. After generating the square grid, it will iterate through the maze breaking down the walls of the maze by selecting a random starting square within the grid. Once it completes generating the puzzle it will solve it utilizing a DFS search algorithm that iteratively looks for paths in order from right, left, top, bottom until it finds the final square.
