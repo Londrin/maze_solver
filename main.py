@@ -4,9 +4,22 @@ from maze import Maze
 
 
 def main():
-    win = Window(800, 600)
+    num_rows = 12
+    num_cols = 16
+    margin = 50
+    screen_x = 800
+    screen_y = 600
+    cell_size_x = (screen_x - 2 * margin) / num_cols
+    cell_size_y = (screen_y - 2 * margin) / num_rows
+    win = Window(screen_x, screen_y)
     
-    m = Maze(50, 50, 12, 16, 44, 42, win)
+    
+
+    m = Maze(margin, margin, num_rows, num_cols, cell_size_x, cell_size_y, win)
+    if m.solve():
+        print("Success")
+    else:
+        print("Failure")
 
     """
     c1 = Cell(win)
